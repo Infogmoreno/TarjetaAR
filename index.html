@@ -89,7 +89,9 @@
 			position="0.38985398411750793 0.11800000071525574 1.2392336036611117e-17" 
 			visible="true" 
 			shadow="cast: false" 
-			animation-mixer="clip: EsqueletoAction">
+			animation-mixer="clip: EsqueletoAction"
+			event-set__enter="_event: mouseenter; material.opacity: 0.5"
+                        event-set__leave="_event: mouseleave; material.opacity: 1">
 		</a-entity>
 		<a-entity 
 			class="clickable" 
