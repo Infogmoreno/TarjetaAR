@@ -81,7 +81,6 @@
             <a-entity 
 			position="0 1.7 -2" 
 			scale="3 3 1"
-		        raycaster="objects: .clickable,.links" 
 		        cursor="rayOrigin: mouse"
 		        startEvents: "click">
 		<a-entity 
@@ -306,7 +305,10 @@
 	    </a-marker>
             <!-- Camera -->
             
-			<a-cursor><a-cursor> 
+	    <a-camera
+ 			  mouse-cursor cursor="rayOrigin: mouse;"
+			  raycaster="objects: .clickable">
+	   </a-camera>
 			
 				
 
