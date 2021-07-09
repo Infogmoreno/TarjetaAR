@@ -101,7 +101,8 @@
             <a-entity 
 			position="0 1.7 -2" 
 			scale="3 3 1"
-		        startEvents: "click">
+		        startEvents: "click"
+		        raycaster="objects: .clickable" cursor>
 		<a-entity 
 			class="clickable" 
 			id="#contacto_tlfno" 
@@ -314,8 +315,8 @@
             <!-- Camera -->
             
 	    <a-camera
- 			  mouse-cursor cursor="rayOrigin: mouse"
-			  raycaster="objects: .clickable">
+ 			  mouse-cursor cursor="rayOrigin: mouse">
+			 
 	   </a-camera>
 			
 				
