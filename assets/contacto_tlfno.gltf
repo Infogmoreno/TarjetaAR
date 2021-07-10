@@ -59,16 +59,18 @@
                 "Lumiere" : {
                     "create_menu" : 0
                 },
-                "b_interactive" : 1,
-                "b_player" : 0,
-                "b_renderer" : 1,
-                "b_aa" : 1,
-                "b_colorManagement" : 0,
                 "b_settings" : 1,
                 "b_vr_controllers" : 0,
+                "b_renderer" : 0,
+                "b_aa" : 1,
+                "b_colorManagement" : 1,
+                "b_player" : 0,
+                "b_interactive" : 1,
+                "s_link" : "https://www.facebook.com/profile.php?id=100053916512248",
                 "b_export" : 1,
-                "s_video" : "Video.mp4",
-                "s_output" : "exporting..."
+                "s_project_name" : "aframe-TarjetaPres",
+                "s_output" : "exporting...",
+                "b_show_env_sky" : 1
             },
             "name" : "Scene",
             "nodes" : [
