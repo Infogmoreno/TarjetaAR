@@ -106,7 +106,7 @@
 		        startEvents: "click"
 		        cursor>
 		<a-entity 
-			class="clickable" 
+			class="contacto" 
 			id="#contacto_tlfno" 
 			gltf-model="#contacto_tlfno"  
 			scale="1 1 1" 
@@ -130,7 +130,7 @@
 		</a-video>
 		
 		<a-entity 
-			class="Demo" 
+			class="DemoYoutube" 
 			id="#DemoYoutube" 
 			gltf-model="#DemoYoutube"  
 			scale="1 1 1"
@@ -163,18 +163,19 @@
 			animation-mixer="clip: EsqueletoAction">
 		</a-entity>
 		<a-entity 
-			class="clickable" 
+			class="email" 
 			id="#email" 
 			gltf-model="#email"  
 			scale="1 1 1" 
 			position="0.04341806471347809 -0.3560279607772827 -8.914969384932192e-08" 
 			visible="true" 
 			shadow="cast: false" 
-			animation-mixer="clip: EsqueletoAction">
+			animation-mixer="clip: EsqueletoAction"
+			raycaster="objects: .email">
 		</a-entity>
 		
 		<a-entity 
-			class="clickable" 
+			class="Facebook" 
 			id="#Facebook_" 
 			gltf-model="#Facebook_"  
 			scale="1 1 1" 
@@ -182,7 +183,8 @@
 			visible="true" 
 			shadow="cast: false" 
 			animation-mixer="clip: EsqueletoAction"
-			link-handler="target: https://www.facebook.com/profile.php?id=100053916512248">
+			link-handler="target: https://www.facebook.com/profile.php?id=100053916512248"
+			raycaster="objects: .Facebook">
 		</a-entity>
 		
 		<a-entity 
@@ -258,18 +260,20 @@
 		</a-entity>
 		<a-entity 
 			id="#TrayectLink" 
+			class="TrayectLink" 
 			gltf-model="#TrayectLink"  
 			scale="1 1 1" 
 			position="0.39014923572540283 -0.13021224737167358 -3.221412470111318e-08" 
 			visible="true" 
 			shadow="cast: false" 
 			animation-mixer="clip: EsqueletoAction"
-			link-handler="target: https://www.linkedin.com/in/jos%C3%A9-mar%C3%ADa-m-80b1827b/">
+			link-handler="target: https://www.linkedin.com/in/jos%C3%A9-mar%C3%ADa-m-80b1827b/"
+			raycaster="objects: .TrayectLink">
 		</a-entity>
 		
 		
 		<a-entity 
-			class="clickable" 
+			class="Twitter" 
 			id="#Twitter" 
 			gltf-model="#Twitter"  
 			scale="1 1 1" 
@@ -277,16 +281,29 @@
 			visible="true" 
 			shadow="cast: false" 
 			animation-mixer="clip: EsqueletoAction"
-			link-handler="target: https://twitter.com/Infogmoreno">
+			link-handler="target: https://twitter.com/Infogmoreno"
+			raycaster="objects: .Twitter">
 		</a-entity>
-		    <a-entity 
-			class="clickable" 
+		<a-entity 
+			class="622" 
 			id="#622" 
 			gltf-model="#622"  
 			scale="1 1 1" 
 			position="-0.216 -0.461 0.032" 
 			visible="true" 
-			shadow="cast: false"> 
+			shadow="cast: false"
+			raycaster="objects: .622">
+	        </a-entity>
+		<a-entity 
+			class="infogmor" 
+			id="#infogmor" 
+			gltf-model="#infogmor"  
+			scale="1 1 1" 
+			position="0 -0.461 0.032" 
+			visible="true" 
+			shadow="cast: false"
+			raycaster="objects: .infogmor">
+	        </a-entity>
 			
 			
 		</a-entity>
