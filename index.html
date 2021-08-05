@@ -100,7 +100,7 @@
 		
 	   <a-camera
  			  mouse-cursor cursor="rayOrigin: mouse;"
-		          raycaster="objects: .clickable" cursor>
+		          >
 
             <a-marker vidhandler preset:"hiro" >  
             <!-- Entities -->
@@ -108,6 +108,7 @@
 			position="0 0.5 -2" 
 			scale="3.5 3.5 1.5"
 		        startEvents: "click"
+		        raycaster="objects: .clickable"
 		        cursor>
 		<a-entity 
 			class="contacto" 
