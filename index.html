@@ -317,7 +317,11 @@
 	    </a-marker>
             <!-- Camera -->
             
-	    <a-cursor color="#4CC3D9" radius-outer="0.10" radius-inner="0.05"></a-cursor>
+	     <a-entity cursor="fuse: true; fuseTimeout: 500"
+            position="0 0 -1"
+            geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+            material="color: black; shader: flat">
+  	    </a-entity>
 			 
 	   </a-camera>
 			
