@@ -322,7 +322,8 @@
 	    </a-marker>
             <!-- Camera -->
             
-	     <a-entity cursor="fuse: true; fuseTimeout: 500; objects: .clickable"
+	     <a-entity cursor="fuse: true; fuseTimeout: 500"
+            rayOrigin:"mouse"
             position="0 0 -1"
             geometry="primitive: ring; radiusInner: 0.003; radiusOuter: 0.005"
             material="color: cyan; shader: flat">
