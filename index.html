@@ -146,7 +146,8 @@
 			shadow="cast: false" 
 			animation-mixer="clip: EsqueletoAction"
 			link-handler="target: https://www.youtube.com/user/Infogmoreno/videos"
-			raycaster="objects: .DemoYoutube"  
+			raycaster="objects: .DemoYoutube"
+			clickable
 			>
                         
 		</a-entity>
@@ -177,6 +178,7 @@
 			visible="true" 
 			shadow="cast: false" 
 			animation-mixer="clip: EsqueletoAction"
+			clickable  
 			>
 		</a-entity>
 		
@@ -190,6 +192,7 @@
 			shadow="cast: false" 
 			animation-mixer="clip: EsqueletoAction"
 			link-handler="target: https://www.facebook.com/profile.php?id=100053916512248"
+			clickable  
 			>
 		</a-entity>
 		
@@ -274,6 +277,7 @@
 			shadow="cast: false" 
 			animation-mixer="clip: EsqueletoAction"
 			link-handler="target: https://www.linkedin.com/in/jos%C3%A9-mar%C3%ADa-m-80b1827b/"
+			clickable  
 			>
 		</a-entity>
 		
@@ -288,6 +292,7 @@
 			shadow="cast: false" 
 			animation-mixer="clip: EsqueletoAction"
 			link-handler="target: https://twitter.com/Infogmoreno"
+			clickable  
 			>
 		</a-entity>
 		<a-entity 
@@ -318,8 +323,9 @@
             <!-- Camera -->
             
 	     <a-entity cursor="fuse: true; fuseTimeout: 500"
+	    cursor raycaster="far: 20; interval: 1000; objects: .clickable"       
             position="0 0 -1"
-            geometry="primitive: ring; radiusInner: 0.002; radiusOuter: 0.003"
+            geometry="primitive: ring; radiusInner: 0.005; radiusOuter: 0.007"
             material="color: cyan; shader: flat">
   	    </a-entity>
 			 
