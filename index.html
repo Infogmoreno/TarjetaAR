@@ -19,25 +19,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">
 	    
 <script>
-  AFRAME.registerComponent('change-color-on-hover', {
-    schema: {
-      opacity: {default: 'opacity'}
-    },
-
-    init: function () {
-      var data = this.data;
-      var el = this.el;  // <a-box>
-      var defaultOpacity = el.getAttribute('material').opacity;
-
-      el.addEventListener('mouseenter', function () {
-        el.setAttribute('opacity', data.opacity);
-      });
-
-      el.addEventListener('mouseleave', function () {
-        el.setAttribute('opacity', defaultOpacity);
-      });
-    }
-  });
+  
 	
  AFRAME.registerComponent('vidhandler', {
         // ...
