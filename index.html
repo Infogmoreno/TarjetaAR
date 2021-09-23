@@ -18,7 +18,8 @@
         <script src="https://rawgit.com/gasolin/aframe-href-component/master/dist/aframe-href-component.min.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
 	    
-	    <style>
+	    
+   <style>
    .button{
     position: absolute;
     bottom: 30px;
@@ -81,8 +82,8 @@
             </a-assets>
 		
 	 <div id=botones style='position: fixed; bottom: 50px; width:100%;  text-align: right; z-index: 1;'>
-        <div id="bot_Separar" class="button">Promo_2</div>
-        <div id="bot_Juntar"  class="button">Promo_1</div>
+        <div id="button" class="button">Promo_2</div>
+        <div id="button" class="button">Promo_1</div>
       </div>
 		
 	   <a-camera>
@@ -105,20 +106,7 @@
 			shadow="cast: false" 
 			>
 		</a-video>
-	       
-	        <a-video 
-			id="#v_0" 
-			src="#video_1" 
-			width="1.6" 
-			height="1" 
-			scale="1 1 0.1" 
-			position="0 0 -1.2709442387404124e-09" 
-			rotation="0 0.0 0" 
-			visible="false" 
-			shadow="cast: false" 
-			>
-		</a-video>		
-		
+	       	       	
 		</a-entity>
 	    </a-marker> 	 
 	   </a-camera>
