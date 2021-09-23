@@ -48,7 +48,7 @@
             <a-assets>
 				
 	        <video id="video_0" loop="false" autoplay="true" src="./media/Video.mp4"></video>
-		<video id="video_0" loop="false" autoplay="true" src="./media/PromoAR_v2.mp4"></video>    
+		<video id="video_1" loop="false" autoplay="true" src="./media/PromoAR_v2.mp4"></video>    
                 <img id="sky"                 src="./resources/sky.jpg">
                 <img id="icon-play"           src="./resources/play.png">
                 <img id="icon-pause"          src="./resources/pause.png">
@@ -59,13 +59,8 @@
             </a-assets>
 		
 	   <a-camera>
-		          
-		     	 	
-		          
-
             <a-marker vidhandler preset:"hiro" >  
-            <!-- Entities -->
-            <a-entity 
+                <a-entity 
 			position="0 0.5 -2" 
 			scale="3.5 3.5 1.5"
 		        startEvents: "click"
@@ -83,11 +78,22 @@
 			shadow="cast: false" 
 			>
 		</a-video>
+	       
+	        <a-video 
+			id="#v_0" 
+			src="#video_1" 
+			width="1.6" 
+			height="1" 
+			scale="1 1 0.1" 
+			position="0 0 -1.2709442387404124e-09" 
+			rotation="0 0.0 0" 
+			visible="false" 
+			shadow="cast: false" 
+			>
+		</a-video>		
 		
 		</a-entity>
-	    </a-marker>
-            <!-- Camera -->
-            	 
+	    </a-marker> 	 
 	   </a-camera>
 		
             <!-- Lights -->
