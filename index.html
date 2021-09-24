@@ -101,6 +101,29 @@
     </a-scene>
 
     <script>
+	    
+	     AFRAME.registerComponent("videohandler", {
+        init: function() {
+          var marker = this.el;
+          this.vid = document.querySelector("#v_0");
+
+          marker.addEventListener(
+            "markerFound",
+            function() {
+              this.toggle = true;
+              this.vid.play();
+            }.bind(this)
+          );
+
+          marker.addEventListener(
+            "markerLost",
+            function() {
+              this.toggle = false;
+              this.vid.pause();
+            }.bind(this)
+          );
+        }
+      });
         document.getElementById("btn1").addEventListener("click", e => {
             document.querySelector("#video_0").setAttribute("src", "./media/Video.mp4");
             document.quertSelector("#video_0").play();
