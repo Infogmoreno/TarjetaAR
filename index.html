@@ -2,6 +2,8 @@
   <head>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/dist/mindar-image.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/dist/mindar-image-aframe.prod.js"></script>	  
     <style>
          .button {
            background-color: #977427;
@@ -54,7 +56,11 @@
 
 </head>
   <body onload="init();" style="margin : 0px; overflow: hidden;">
-    <a-scene
+    <a-scene mindar-image="imageTargetSrc: https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/examples/image-tracking/assets/card-example/card.mind;" 
+      color-space="sRGB" 
+      renderer="colorManagement: true" 
+      vr-mode-ui="enabled: false" 
+      device-orientation-permission-ui="enabled: false">
       embedded
       arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
       vr-mode-ui="enabled: false;"
