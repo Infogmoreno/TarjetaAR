@@ -56,14 +56,13 @@
 
 </head>
   <body onload="init();" style="margin : 0px; overflow: hidden;">
-    <a-scene embedded 
+    <a-scene embedded
+      arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
       mindar-image="imageTargetSrc: https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/examples/image-tracking/assets/card-example/card.mind;" 
       color-space="sRGB" 
       renderer="colorManagement: true" 
       vr-mode-ui="enabled: false" 
       device-orientation-permission-ui="enabled: false"
-      
-      arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
       vr-mode-ui="enabled: false;"
       shadow="type: pcfsoft; autoUpdate: true;"
       renderer="antialias: true; colorManagement: true; physicallyCorrectLights: true;"
