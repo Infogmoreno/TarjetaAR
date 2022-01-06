@@ -57,6 +57,7 @@
     >
       <button class="button" id="btn1">Promo_1</button>
       <button class="button" id="btn2">Promo_2</button>
+      <button class="button" id="btn3">Promo_3</button>
     </div>
   </head>
   <body onload="init();" style="margin: 0px; overflow: hidden">
@@ -142,6 +143,13 @@
       });
 
       document.getElementById("btn2").addEventListener("click", (e) => {
+        document
+          .querySelector("#video_0")
+          .setAttribute("src", "./media/PromoAR_v2.mp4");
+        document.quertSelector("#video_0").play();
+      });
+      
+       document.getElementById("btn2").addEventListener("click", (e) => {
         document
           .querySelector("#video_0")
           .setAttribute("src", "./media/PromoAR_v2.mp4");
