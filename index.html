@@ -2,7 +2,7 @@
   <head>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>  
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <style>
          .button {
            background-color: #977427;
@@ -46,76 +46,80 @@
     </style>
 
     <div
-      style="position: fixed; bottom: 10px; left: 275px; width:100%; text-align: center; z-index: 1;"
+      style="
+        position: fixed;
+        bottom: 10px;
+        left: 275px;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+      "
     >
       <button class="button" id="btn1">Promo_1</button>
       <button class="button" id="btn2">Promo_2</button>
-     
     </div>
-
-</head>
-  <body onload="init();" style="margin : 0px; overflow: hidden;">
-    <a-scene embedded
+  </head>
+  <body onload="init();" style="margin: 0px; overflow: hidden">
+    <a-scene
+      embedded
       arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
-      color-space="sRGB" 
-      renderer="colorManagement: true" 
-      vr-mode-ui="enabled: false" 
+      color-space="sRGB"
+      vr-mode-ui="enabled: false"
       device-orientation-permission-ui="enabled: false"
-      vr-mode-ui="enabled: false;"
       shadow="type: pcfsoft; autoUpdate: true;"
       renderer="antialias: true; colorManagement: true; physicallyCorrectLights: true;"
     >
-      <!-- Assets -->>
+      <!-- Assets -->
       <a-assets>
-        <video id="video_0" loop="false" autoplay="true" src="./media/Video.mp4" crossorigin="anonymous"></video>
-	<a-asset-item id="logo3D" src="./assets/Logo_Infogmoreno.gltf"></a-asset-item>
-       
+        <video
+          id="video_0"
+          loop="false"
+          autoplay="true"
+          src="./media/Video.mp4"
+          crossorigin="anonymous"
+        ></video>
+        
       </a-assets>
 
       <a-camera position="0 0.15 0">
         <a-marker preset="hiro" videohandler>
-          <a-entity
-            position="0 0 -0.8"
-            scale="2 2 0.1">
-
-            <a-video 
-			id="#v_0" 
-			src="#video_0" 
-			width="1.6" 
-			height="1" 
-			scale="1 1 0.1" 
-			position="0 0 -1.2709442387404124e-09" 
-			rotation="0 0.0 0" 
-			visible="true" 
-			shadow="cast: false" 
-			>
-         
+          <a-entity position="0 0 -0.8" scale="2 2 0.1">
+            <a-video
+              id="#v_0"
+              src="#video_0"
+              width="1.6"
+              height="1"
+              scale="1 1 0.1"
+              position="0 0 -1.2709442387404124e-09"
+              rotation="0 0.0 0"
+              visible="true"
+              shadow="cast: false"
+            >
+            </a-video>
           </a-entity>
           <a-entity
-          id="light1"
-          position="4.076245307922363 2.903861999511719 0"
-          light="castShadow:true; color:#ffffff; distance:40.0; type:point; intensity:6.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"
-        ></a-entity>
+            id="light1"
+            position="4.076245307922363 2.903861999511719 0"
+            light="castShadow:true; color:#ffffff; distance:40.0; type:point; intensity:6.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"
+          ></a-entity>
           <a-entity
-          id="light2"
-          position="-6.3098464012146 1.8208726644515991 0"
-          light="castShadow:true; color:#ffffff; distance:40.0; type:point; intensity:3.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"
-         ></a-entity>
-         </a-entity>
+            id="light2"
+            position="-6.3098464012146 1.8208726644515991 0"
+            light="castShadow:true; color:#ffffff; distance:40.0; type:point; intensity:3.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"
+          ></a-entity>
         </a-marker>
       </a-camera>
     </a-scene>
 
     <script>
-	    
-	     AFRAME.registerComponent("videohandler", {
-        init: function() {
+      AFRAME.registerComponent("videohandler", {
+        init: function () {
           var marker = this.el;
           this.vid = document.querySelector("#video_0");
 
           marker.addEventListener(
             "markerFound",
-            function() {
+            function () {
               this.toggle = true;
               this.vid.play();
             }.bind(this)
@@ -123,23 +127,26 @@
 
           marker.addEventListener(
             "markerLost",
-            function() {
+            function () {
               this.toggle = false;
               this.vid.pause();
             }.bind(this)
           );
-        }
+        },
       });
-        document.getElementById("btn1").addEventListener("click", e => {
-            document.querySelector("#video_0").setAttribute("src", "./media/Video.mp4");
-            document.quertSelector("#video_0").play();
-        })
+      document.getElementById("btn1").addEventListener("click", (e) => {
+        document
+          .querySelector("#video_0")
+          .setAttribute("src", "./media/Video.mp4");
+        document.quertSelector("#video_0").play();
+      });
 
-        document.getElementById("btn2").addEventListener("click", e => {
-            document.querySelector("#video_0").setAttribute("src", "./media/PromoAR_v2.mp4");
-            document.quertSelector("#video_0").play();
-        })
-       
+      document.getElementById("btn2").addEventListener("click", (e) => {
+        document
+          .querySelector("#video_0")
+          .setAttribute("src", "./media/PromoAR_v2.mp4");
+        document.quertSelector("#video_0").play();
+      });
     </script>
   </body>
 </html>
