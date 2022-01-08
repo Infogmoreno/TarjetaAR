@@ -84,7 +84,7 @@
 
       <a-camera position="0 0.15 0">
         <a-marker preset="hiro" videohandler>
-          <a-entity position="0 0 -0.8" scale="2 2 0.1">
+          <a-entity position="0 0 -0.8" scale="2.5 2.5 0.1">
             <a-video
               id="#v_0"
               src="#video_0"
@@ -138,14 +138,14 @@
       document.getElementById("btn1").addEventListener("click", (e) => {
         document
           .querySelector("#video_0")
-          .setAttribute("src", "./media/PromoAR_v2.mp4");
+          .setAttribute("src", "./media/Video.mp4");
         document.quertSelector("#video_0").play();
       });
 
       document.getElementById("btn2").addEventListener("click", (e) => {
         document
           .querySelector("#video_0")
-          .setAttribute("src", "./media/Video.mp4");
+          .setAttribute("src", "./media/PromoAR_v2.mp4");
         document.quertSelector("#video_0").play();
       });
       
