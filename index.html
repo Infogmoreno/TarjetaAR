@@ -56,8 +56,9 @@
       "
     >
       <button class="button" id="btn1">Demo_RA_1</button>
-      <button class="button" id="btn2">Demo_RA_2</button>
+      <button class="button" id="btn2">Demo_RA_2>/button>
       <button class="button" id="btn3">Demo_RA_3</button>
+      <button class="button" id="btn4">Demo_RA_4</button>
     </div>
   </head>
   <body onload="init();" style="margin: 0px; overflow: hidden">
@@ -143,6 +144,13 @@
       });
 
       document.getElementById("btn2").addEventListener("click", (e) => {
+        document
+          .querySelector("#video_0")
+          .setAttribute("src", "./media/PromoAR_v2.mp4");
+        document.quertSelector("#video_0").play();
+      });
+      
+       document.getElementById("btn3").addEventListener("click", (e) => {
         document
           .querySelector("#video_0")
           .setAttribute("src", "./media/PromoAR_v2.mp4");
