@@ -45,6 +45,9 @@
        }
     </style>
 
+  </head>
+  <body onload="init();" style="margin: 0px; overflow: hidden">
+    
     <div
       style="
         position: fixed;
@@ -60,8 +63,7 @@
       <button class="button" id="btn3">Demo_RA_3</button>
       <button class="button" id="btn4">Demo_RA_4</button>
     </div>
-  </head>
-  <body onload="init();" style="margin: 0px; overflow: hidden">
+    
     <a-scene
       embedded
       arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
@@ -80,7 +82,6 @@
           src="./media/Promo2_RA_2022_640.mp4"
           crossorigin="anonymous"
         ></video>
-        
       </a-assets>
 
       <a-camera position="0 0.15 0">
