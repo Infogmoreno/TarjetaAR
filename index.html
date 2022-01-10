@@ -82,6 +82,38 @@
           src="./media/Promo2_RA_2022_640.mp4"
           crossorigin="anonymous"
         ></video>
+        
+         <video
+          id="video_1"
+          loop="false"
+          autoplay="true"
+          src="./media/Video.mp4"
+          crossorigin="anonymous"
+        ></video>
+        
+         <video
+          id="video_2"
+          loop="false"
+          autoplay="true"
+          src="./media/Promo3_RA_2022_640.mp4"
+          crossorigin="anonymous"
+        ></video>
+        
+          <video
+          id="video_3"
+          loop="false"
+          autoplay="true"
+          src="./media/PromoAR_v2.mp4"
+          crossorigin="anonymous"
+        ></video>
+        
+          <video
+          id="video_4"
+          loop="false"
+          autoplay="true"
+          src="./media/Promo2_RA_2022_640.mp4"
+          crossorigin="anonymous"
+        ></video>
       </a-assets>
 
       <a-camera position="0 0.15 0">
@@ -140,28 +172,28 @@
       document.getElementById("btn1").addEventListener("click", (e) => {
         document
           .querySelector("#video_0")
-          .setAttribute("src", "./media/Video.mp4");
+          .setAttribute("src", "#video_1");
         document.quertSelector("#video_0").play();
       });
 
       document.getElementById("btn2").addEventListener("click", (e) => {
         document
           .querySelector("#video_0")
-          .setAttribute("src", "./media/Promo3_RA_2022_640.mp4");
+          .setAttribute("src", "#video_2");
         document.quertSelector("#video_0").play();
       });
       
        document.getElementById("btn3").addEventListener("click", (e) => {
         document
           .querySelector("#video_0")
-          .setAttribute("src", "./media/PromoAR_v2.mp4");
+          .setAttribute("src", "#video_3");
         document.quertSelector("#video_0").play();
       });
       
        document.getElementById("btn3").addEventListener("click", (e) => {
         document
           .querySelector("#video_0")
-          .setAttribute("src", "./media/Promo2_RA_2022_640.mp4");
+          .setAttribute("src", "#video_4");
         document.quertSelector("#video_0").play();
       });
     </script>
